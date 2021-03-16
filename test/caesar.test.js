@@ -76,4 +76,12 @@ describe("caesar", () => {
     let expected = caesar(input2, shift, encode);
     expect(actual).to.equal(expected);
   });
+  it("should handle shifts that go past the end of the alphabet.", () => {
+    let input1 = "z";
+    let shift = 3;
+    let encode = true;
+    let actual = caesar(input1, shift, encode);
+    let expected = "c";
+    expect(actual).to.equal(expected);
+  });
 });
